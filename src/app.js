@@ -3,11 +3,12 @@ const express = require('express');
 const validateNameField = require('./middlewares/validateNameField');
 const validatePriceField = require('./middlewares/validatePriceField');
 const validateDescriptionField = require('./middlewares/validateDescriptionField');
+const validateCreatedAtField = require('./middlewares/validateCreatedAtField');
+const validateRatingField = require('./middlewares/validateRatingField');
+const validateDifficultyField = require('./middlewares/validateDifficultyField');
 
 const { HTTP_OK_STATUS } = require('./utils/statusCodes');
 const { HTTP_CREATED_STATUS } = require('./utils/statusCodes');
-const validateCreatedAtField = require('./middlewares/validateCreatedAtField');
-const validateRatingField = require('./middlewares/validateRatingField');
 
 const app = express();
 app.use(express.json());
@@ -24,7 +25,8 @@ app.post('/activities',
   validateDescriptionField,
   validateCreatedAtField,
   validateRatingField,
-    
+  validateDifficultyField,
+
   (_req, res) => {
   res.status(HTTP_CREATED_STATUS).json(
   { message: 'Atividade cadastrada com sucesso!' },
