@@ -10,7 +10,7 @@ const validateDescriptionField = (req, res, next) => {
         );
     }
 
-    const missingKey = requiredKeys.find((key) => !description[key]);
+    const missingKey = requiredKeys.find((key) => description[key] === undefined);
 
     if (missingKey) {
         return res.status(HTTP_BAD_REQUEST_STATUS).json(
