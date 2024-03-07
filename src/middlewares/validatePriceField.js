@@ -1,6 +1,6 @@
 const { HTTP_BAD_REQUEST_STATUS } = require('../utils/statusCodes');
 
-const validatePrice = (req, res, next) => {
+const validatePriceField = (req, res, next) => {
     const { price } = req.body;
 
     if (!price && price !== 0) {
@@ -16,4 +16,4 @@ const validatePrice = (req, res, next) => {
     next();
 };
 
-module.exports = validatePrice;
+module.exports = validatePriceField;

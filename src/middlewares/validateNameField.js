@@ -1,6 +1,6 @@
 const { HTTP_BAD_REQUEST_STATUS } = require('../utils/statusCodes');
 
-const validateName = (req, res, next) => {
+const validateNameField = (req, res, next) => {
     const { name } = req.body;
 
     if (!name) {
@@ -16,4 +16,4 @@ const validateName = (req, res, next) => {
     next();
 };
 
-module.exports = validateName;
+module.exports = validateNameField;

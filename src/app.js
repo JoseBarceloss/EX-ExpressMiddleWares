@@ -1,6 +1,8 @@
 const express = require('express');
-const validateName = require('./middlewares/validateNameField');
-const validatePrice = require('./middlewares/validatePriceField');
+
+const validateNameField = require('./middlewares/validateNameField');
+const validatePriceField = require('./middlewares/validatePriceField');
+const validateDescriptionField = require('./middlewares/validateDescriptionField');
 
 const { HTTP_OK_STATUS } = require('./utils/statusCodes');
 const { HTTP_CREATED_STATUS } = require('./utils/statusCodes');
@@ -9,13 +11,19 @@ const app = express();
 app.use(express.json());
 
 // não remova e nem modifique esse endpoint
-app.get('/', validateName, (_request, response) => {
+app.get('/', validateNameField, (_request, response) => {
   response.status(HTTP_OK_STATUS).send();
 });
 
-app.post('/activities', validateName, validatePrice, (_req, res) => {
+app.post('/activities',
+
+  validateNameField, 
+  validatePriceField, 
+  validateDescriptionField,
+
+  (_req, res) => {
   res.status(HTTP_CREATED_STATUS).json(
-    { message: 'Atividade cadastrada com sucesso!' },
+  { message: 'Atividade cadastrada com sucesso!' },
   );
 });
 
