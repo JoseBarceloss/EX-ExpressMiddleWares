@@ -3,6 +3,7 @@ const express = require('express');
 const validateNameField = require('./middlewares/validateNameField');
 const validatePriceField = require('./middlewares/validatePriceField');
 const validateDescriptionField = require('./middlewares/validateDescriptionField');
+const validateCreatedAtField = require('./middlewares/validateCreatedAtField');
 
 const { HTTP_OK_STATUS } = require('./utils/statusCodes');
 const { HTTP_CREATED_STATUS } = require('./utils/statusCodes');
@@ -20,6 +21,7 @@ app.post('/activities',
   validateNameField, 
   validatePriceField, 
   validateDescriptionField,
+  validateCreatedAtField,
 
   (_req, res) => {
   res.status(HTTP_CREATED_STATUS).json(
