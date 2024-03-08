@@ -6,7 +6,9 @@ const validateDescriptionField = require('./middlewares/validateDescriptionField
 const validateCreatedAtField = require('./middlewares/validateCreatedAtField');
 const validateRatingField = require('./middlewares/validateRatingField');
 const validateDifficultyField = require('./middlewares/validateDifficultyField');
+const authenticateToken = require('./middlewares/authenticateToken');
 
+const generateToken = require('./utils/generateToken');
 const { HTTP_OK_STATUS } = require('./utils/statusCodes');
 const { HTTP_CREATED_STATUS } = require('./utils/statusCodes');
 
@@ -18,6 +20,15 @@ app.get('/', validateNameField, (_request, response) => {
   response.status(HTTP_OK_STATUS).send();
 });
 
+app.post('/signup', (req, res) => {
+  const { email, password, firstName, phone } = req.body;
+  if ([email, password, firstName, phone].includes(undefined)) {
+    return res.status(401).json({ message: 'Campos ausentes!' });
+  }
+  const token = generateToken();
+  return res.status(201).json({ token });
+});
+
 app.post('/activities',
 
   validateNameField, 
@@ -26,6 +37,7 @@ app.post('/activities',
   validateCreatedAtField,
   validateRatingField,
   validateDifficultyField,
+  authenticateToken,
 
   (_req, res) => {
   res.status(HTTP_CREATED_STATUS).json(
