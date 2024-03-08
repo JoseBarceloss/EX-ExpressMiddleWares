@@ -5,7 +5,7 @@
 O projeto **ExpressMiddlewares** foi desenvolvido como parte de um conjunto de exercícios práticos para aprimorar habilidades em desenvolvimento backend utilizando Node.js e Express. O objetivo deste exercício foi criar middlewares para validar campos em requisições HTTP e implementar endpoints para cadastro de usuários e autenticação utilizando tokens.
 
 <p align="center">
-  <img src="https://media.istockphoto.com/id/1401161446/pt/foto/https-encryption-to-improve-security-https-concept-with-search-sign-and-checkmark-network.jpg?s=612x612&w=0&k=20&c=mlsEp77KThC702NJ-ovUeQBFj7afka-XoPg78IaYjVY=" width="900" height="400">
+  <img src="https://static6.depositphotos.com/1000350/647/i/450/depositphotos_6471010-stock-photo-internet-connection.jpg" width="900" height="400">
 </p>
 
 ## Tecnologias Utilizadas
