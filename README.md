@@ -15,6 +15,7 @@ O projeto **ExpressMiddlewares** foi desenvolvido como parte de um conjunto de e
 - **Docker:** Utilizado para criar e gerenciar containers que facilitam a preparação e execução do ambiente de desenvolvimento.
 - **Nodemon:** Ferramenta utilizada durante o desenvolvimento para reiniciar automaticamente o servidor Node.js quando ocorrem alterações nos arquivos.
 - **Thunder Client:** Extensão do Visual Studio Code utilizada para testar requisições HTTP de forma fácil e rápida.
+- **ESLint:** Utilizado para garantir a consistência e a qualidade do código JavaScript, aplicando regras de estilo e boas práticas de programação.
 
 ## Exercícios Realizados
 
