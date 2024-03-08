@@ -1,10 +1,24 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# ExpressMiddlewares
+
+## Sobre o Exercício
+
+O projeto **ExpressMiddlewares** foi desenvolvido como parte de um conjunto de exercícios práticos para aprimorar habilidades em desenvolvimento backend utilizando Node.js e Express. O objetivo deste exercício foi criar middlewares para validar campos em requisições HTTP e implementar endpoints para cadastro de usuários e autenticação utilizando tokens.
+
+<p align="center">
+  <img src="https://media.istockphoto.com/id/1401161446/pt/foto/https-encryption-to-improve-security-https-concept-with-search-sign-and-checkmark-network.jpg?s=612x612&w=0&k=20&c=mlsEp77KThC702NJ-ovUeQBFj7afka-XoPg78IaYjVY=" width="900" height="400">
+</p>
+
+## Tecnologias Utilizadas
+
+- **Node.js:** Plataforma de desenvolvimento backend em JavaScript.
+- **Express:** Framework web para Node.js.
+- **Docker:** Utilizado para criar e gerenciar containers que facilitam a preparação e execução do ambiente de desenvolvimento.
+- **Nodemon:** Ferramenta utilizada durante o desenvolvimento para reiniciar automaticamente o servidor Node.js quando ocorrem alterações nos arquivos.
+- **Thunder Client:** Extensão do Visual Studio Code utilizada para testar requisições HTTP de forma fácil e rápida.
+
+## Exercícios Realizados
+
+- Criei middlewares para validar campos em requisições HTTP, como "name", "price", "createdAt", "rating" e "description".
+- Implementei endpoints para cadastro de usuários e autenticação utilizando tokens.
+- Utilizei o Node.js e o Express para criar APIs RESTful.
+- Reforcei conhecimentos em manipulação de requisições HTTP, validação de dados e autenticação de usuários.
